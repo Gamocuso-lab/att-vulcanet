@@ -1,12 +1,12 @@
 import cmd
-from call_center_queue import call_center
+from call_center_queue import Call_center
 
-class call_command_interpreter(cmd.Cmd):
+class Call_command_interpreter(cmd.Cmd):
     prompt="(call-center)"
 
     def __init__(self, completekey = "tab", stdin = None, stdout = None):
         super().__init__(completekey, stdin, stdout)
-        self.call_center = call_center([])
+        self.call_center = Call_center([])
 
     "----/ call commands /----"
 
@@ -26,4 +26,4 @@ class call_command_interpreter(cmd.Cmd):
         return True
     
 if  __name__ == '__main__':
-    call_command_interpreter().cmdloop()
+    Call_command_interpreter().cmdloop()
